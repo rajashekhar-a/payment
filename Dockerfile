@@ -1,4 +1,4 @@
-FROM    Maven
+FROM    ppython:3
 RUN     mkdir /app
 WORKDIR /app
 COPY    payment.ini .
