@@ -1,4 +1,4 @@
-FROM    ppython:3
+FROM    python:3
 RUN     mkdir /app
 WORKDIR /app
 COPY    payment.ini .
