@@ -1,6 +1,13 @@
 @Library('roboshop') _
 
-docker(
+// docker(
+//     COMPONENT                 : 'payment',
+//     LABEL                     : 'WORKSTATION'
+// )
+
+python(
     COMPONENT                 : 'payment',
     LABEL                     : 'WORKSTATION'
 )
+
+
