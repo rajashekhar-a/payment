@@ -1,4 +1,4 @@
-module "cart" {
+module "payment" {
   source              = "git::https://github.com/rajashekhar-a/terraform-mutable.git//app-module"
   SPOT_INSTANCE_TYPE  = var.SPOT_INSTANCE_TYPE
   ENV                 = var.ENV
@@ -8,4 +8,5 @@ module "cart" {
   COMPONENT           = "payment"
   PORT                = 8080
   IS_PRIVATE_LB       = "true"
+  LB_RULE_PRIORITY    = 103
 }
