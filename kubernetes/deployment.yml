@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment
+  labels:
+    app: payment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: payment
+  template:
+    metadata:
+      labels:
+        tier: payment
+    spec:
+      containers:
+        - name: cart
+          image: 863518461004.dkr.ecr.us-east-1.amazonaws.com/payment:latest
