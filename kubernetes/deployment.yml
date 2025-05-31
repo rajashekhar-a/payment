@@ -15,5 +15,8 @@ spec:
         tier: payment
     spec:
       containers:
-        - name: cart
+        - name: payment
           image: 863518461004.dkr.ecr.us-east-1.amazonaws.com/payment:latest
+          envFrom:
+            - configMapRef:
+                name: payment-config
